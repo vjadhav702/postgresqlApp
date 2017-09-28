@@ -1,5 +1,0 @@
----
-applications:
-- name: URLEncoderApp
-  path: target/URLEncoderApp-0.0.1-SNAPSHOT.war
-  host: URLEncoderApp

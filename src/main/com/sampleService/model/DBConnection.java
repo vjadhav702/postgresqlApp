@@ -2,6 +2,7 @@ package main.com.sampleService.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,13 +53,14 @@ public class DBConnection {
 		if (env != null) {
 			mapNameCredetials = new HashMap<String, String>();
 			JSONObject obj = new JSONObject(env);
-			JSONArray arr = obj.getJSONArray("postgresql");
+			JSONArray arr = obj.getJSONArray("DistributedServiceBundle");
 
 			String DB_USERNAME = arr.getJSONObject(0).getJSONObject("credentials").getString("username");
 			String DB_PASSWORD = arr.getJSONObject(0).getJSONObject("credentials").getString("password");
 			String DB_NAME = arr.getJSONObject(0).getJSONObject("credentials").getString("dbname");
 			String host = arr.getJSONObject(0).getJSONObject("credentials").getString("hostname");
 			int port = arr.getJSONObject(0).getJSONObject("credentials").getInt("port");
+			//port = 6432;
 			
 			String URI = "jdbc:postgresql://"+host+":"+port+"/"+DB_NAME;
 			

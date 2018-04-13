@@ -1,3 +1,3 @@
-main\com\twitterStream\StreamTwitterData$1.class
-main\com\twitterStream\StreamTwitterData.class
-main\com\sampleService\model\DBConnection.class
+main/com/sampleService/model/DBConnection.class
+main/com/twitterStream/StreamTwitterData.class
+main/com/twitterStream/StreamTwitterData$1.class
